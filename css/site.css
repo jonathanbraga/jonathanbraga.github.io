@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700); 
+
+body {
+	font-family: 'Raleway'; 
+	padding-top: 70px;
+	text-align: center;
+}
+
+.img-circle-size{
+	width: 300px; 
+	height: 300px;
+} 
+
+.color-text{
+	color: white;
+}
