@@ -35,11 +35,17 @@ body {
 
 .icon-programer{
 	color : white ; 
-	font-size: 10em;  
+	font-size: 6em;  
 }  
 
 .icon-text{
 	color: white ; 
 	text-align: center;
-}
+} 
 
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: black;
+  background-color: white;
+} 
