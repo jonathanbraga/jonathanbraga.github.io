@@ -31,4 +31,15 @@ body {
 
 .section-color{
 	background-color: #FFF;
+} 
+
+.icon-programer{
+	color : white ; 
+	font-size: 10em;  
+}  
+
+.icon-text{
+	color: white ; 
+	text-align: center;
 }
+
