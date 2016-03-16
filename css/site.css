@@ -48,4 +48,9 @@ body {
 .navbar-default .navbar-nav > li > a:focus {
   color: black;
   background-color: white;
-} 
+}  
+
+.modal-more {
+	display: inline; 
+	padding-right: 10px;
+}

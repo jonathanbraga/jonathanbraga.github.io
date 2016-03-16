@@ -81,6 +81,72 @@
         
     </nav>
 	
+	
+			<!--Modal Referente a Hardware -->
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" id="hardware" role="dialog" aria-labelledby="mySmallModalLabel">
+	
+		<div class="modal-dialog modal-lg">
+		
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close"  data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Hardware</h4>
+				</div>
+				
+				<div class="modal-body">
+					<p>My experience with hardware : </p>
+					
+					<li> Hardware : Arduino ; Skill level : high-intermediate </li>
+					<li> Hardware : Intel Galileo 2 gen ; Skill level : low-intermediate </li>
+					<li> Hardware : Altera FPGA board ; Skill level : novice </li>
+		
+				</div> 
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div> 
+			</div>
+		</div>
+		
+	</div>
+		<!--Modal Referente a Hardware -->
+	
+		<!--Modal Referente a MORE -->
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" id="more" role="dialog" aria-labelledby="mySmallModalLabel">
+	
+		<div class="modal-dialog modal-lg">
+		
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">More information about me</h4>
+				</div>
+				
+				<div class="modal-body">
+					<p>I also have some skills with : </p>
+			
+					<li class="modal-more">Photoshop</li>
+					<li class="modal-more">Ilustrator</li>
+					<li class="modal-more">Linux</li>
+					<li class="modal-more">Git</li>
+					<li class="modal-more">Latex</li>
+					<li class="modal-more">Matlab</li>
+					<li class="modal-more">Scilab</li>
+			
+					<hr> <h4>Works IPython</h4> 
+					<p>Digital System Processing :</p>
+					<li><a href="#">FFT</a></li>
+		
+				</div>
+				
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div> 
+			</div>
+		</div>
+		
+	</div>
+		<!--Modal Referente a MORE -->
+	
 	<div id="fullpage"> 
 
 
@@ -144,14 +210,14 @@
 
                  <div class="col-md-4 col-xs-6">
 
-                  <a class="page-scroll" href="#hardware">  <i class="material-icons " style="font-size: 100px;color:white; margin-top: 5px;" >developer_board</i></a>
+                  <a class="page-scroll" href="#">  <i data-target="#hardware" data-toggle="modal" data-target=".bs-example-modal-lg" class="material-icons " style="font-size: 100px;color:white; margin-top: 5px;" >developer_board</i></a>
                     <h3 class="icon-text" style="margin-top: 32px;">Hardware</h3>
 
                  </div> 
 
-                 <div class="col-md-4 col-xs-12">
-                   
-                   <a class="page-scroll" href="#more"> <i class="material-icons" style="font-size: 100px;color:white;margin-top: 10px;">control_point</i></a>
+                 <div class="col-md-4 col-xs-12">  
+                 
+                   <a class="page-scroll" href="#"> <i data-target="#more" data-toggle="modal" data-target=".bs-example-modal-lg" class="material-icons" style="font-size: 100px;color:white;margin-top: 10px;">control_point</i></a>
                     <h3 class="icon-text" style="margin-top: 38px;">More</h3>
                  </div>
 
@@ -170,9 +236,12 @@
                 </div> 
                 
             </div>
-        </div>
+        </div>	
+		
 
-	</div>
+	</div> 
+	
+	
 
 </div>
     
