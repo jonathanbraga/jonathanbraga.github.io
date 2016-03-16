@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="css/font-mfizz/font-mfizz.css">
     <!-- icon google hardware -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+	
 
 	    <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -56,7 +56,7 @@
                     <span class="icon-bar"></span> 
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#home">Jonathan Braga</a>
+                <a class="navbar-brand">Jonathan Braga</a>
             </div>
 			
             <div class="collapse navbar-collapse">
@@ -82,7 +82,39 @@
     </nav>
 	
 	
-			<!--Modal Referente a Hardware -->
+			<!--Modal Referente a Language -->
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" id="language" role="dialog" aria-labelledby="mySmallModalLabel">
+	
+		<div class="modal-dialog modal-lg">
+		
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close"  data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Language</h4>
+				</div>
+				
+				<div class="modal-body">
+										<p> Desktop </p>
+					<li class="modal-more"> <i class="icon-cplusplus icon-modal" data-toggle="tooltip" title="C++"></i> </li>
+					<li class="modal-more"> <i class="icon-c icon-modal" data-toggle="tooltip" title="C"></i> </li>
+					<li class="modal-more"> <i class="icon-csharp icon-modal" data-toggle="tooltip" title="C#"></i> </li>
+					<li class="modal-more"> <i class="icon-java-bold icon-modal" data-toggle="tooltip" title="Java"></i> </li> 
+										<p> Web </p>
+					<li class="modal-more"> <i class="icon-css icon-modal" data-toggle="tooltip" title="CSS"></i> </li>
+					<li class="modal-more"> <i class="icon-html icon-modal" data-toggle="tooltip" title="HTML"></i> </li>
+					<li class="modal-more"> <i class="icon-javascript-alt icon-modal" data-toggle="tooltip" title="JavaScript"></i> </li>
+		
+				</div> 
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div> 
+			</div>
+		</div>
+		
+	</div>
+		<!--Modal Referente a Language -->			
+		
+		<!--Modal Referente a Hardware -->
 	<div class="modal fade bs-example-modal-lg" tabindex="-1" id="hardware" role="dialog" aria-labelledby="mySmallModalLabel">
 	
 		<div class="modal-dialog modal-lg">
@@ -161,7 +193,7 @@
 		<div class="col-md-12">  
 		
             <h1 class="color-text">Jonathan Braga</h1> 
-            <h5 class="color-text">Futuro engenheiro mecatrônico, programador e empreendedor</h5>
+            <h5 class="color-text">Futuro engenheiro mecatrônico, programador e sócio-fundado <a href="https://www.ifabric.com.br/" style="color:white; text-decoration:underline;" target="_blanck">iFabric</a></h5>
         
 		</div> 
 		
@@ -184,7 +216,7 @@
                  </p>
 
                  <p class="color-text">
-                     No ano de 2016 criei junto com alguns colegas a empresa Ifabric.
+                     No ano de 2016 criei junto com alguns colegas a empresa iFabric.
                  </p>
 
             </div>
@@ -203,7 +235,7 @@
 
                  <div class="col-md-4 col-xs-6">
 
-                  <a class="page-scroll" href="#language">  <i class="icon-shell icon-programer" data-toggle="tooltip" title="CSS"></i> </a>
+                  <a class="page-scroll" href="#">  <i data-target="#language" data-toggle="modal" data-target=".bs-example-modal-lg" class="icon-shell icon-programer" data-toggle="tooltip" title="CSS"></i> </a>
                     <h3 class="icon-text">Language</h3>
 
                  </div> 
@@ -233,7 +265,14 @@
 
                 <div style="color: white;" class="page-header">
                     <h1>Contact</h1>
-                </div> 
+                </div>  
+				
+				<div class="col-md-12 col-xs-12" style="padding-top: 50px;">  
+					<h3 class="color-text">Jonathan Braga </h3> 
+						<p class="color-text"><span class="glyphicon glyphicon-envelope"></span> jonathanb2br@gmail.com</p>
+					 				 
+					       
+                </div>
                 
             </div>
         </div>	
