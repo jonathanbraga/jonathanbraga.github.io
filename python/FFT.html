@@ -179,7 +179,7 @@ div#notebook {
 <p><html></p>
 <p><body>
     <h1>Introdução histórica</h1>
-        <p>Historicamente falando a FFT tem sua peculiaridade,começando em 1805 quando Gauss tentou interpolarizar a órbita de dois asteróides, Pallas e Juno.Assim ele desenvolveu a transformada discreta de Fourier (DFT), antes mesmo que Fourier publicasse os seu resultados em 1822, para que pudesse ser calculado a DFT, Gaus, iventou um algoritmo que é equivalente ao de Cooley e Tukey, criadores da FFT. Em 1965 J.W. Cooley and J.W. Tukey motivados pelo período de guerra que os EUA viva, interessados em descobrir um método para detectar testes nucleares soviéticos, desenvolveram um algorítimo que calculava a DFT da sequência de n números com mais eficiência, conseguindo usar seu algoritmo para detectar séries temporais sismológicas e conseguindo detectar os testes nucleares.</p> 
+        <p>Historicamente falando a FFT tem sua peculiaridade,começando em 1805 quando Gauss tentou traçar a órbita de dois asteroides, Pallas e Juno.Assim ele desenvolveu a transformada discreta de Fourier (DFT), antes mesmo que Fourier publicasse os seu resultados em 1822, para que pudesse ser calculado a DFT, Gaus, inventou um algoritmo que é equivalente ao de Cooley e Tukey, criadores da FFT. Em 1965 J.W. Cooley e J.W. Tukey motivados pelo período de guerra que os EUA viva, interessados em descobrir um método para detectar testes nucleares soviéticos, desenvolveram um algorítimo que calculava a DFT da sequência de n números com mais eficiência, conseguindo usar seu algoritmo para detectar séries temporais sismológicas e conseguindo detectar os testes nucleares.</p> 
         <hr></p>
 <html>
 </div>
@@ -195,9 +195,9 @@ div#notebook {
 
     <h1>Transformada de Fourier</h1>
 
-       <p> A motivação para a transformada de Fourier veio com o estudo da série de Fourier. No estudo da série de Fourier, funções que são complicadas mas periódicas podem ser escritas através da soma de senos e cossenos. Devido as propriedades que o seno e o cosseno possuem é possível recuperar a amplitude de cada onda na série de Fourier. Muito dos casos é aconselhavel usar  a forma de Euler, $$e^{(2 \pi i \theta)} = \cos(2 \pi \theta) + i \sin(2 \pi \theta)$$ Re-escrever senos e cossenos como exponenciais complexas faz-se necessário que o coeficiente de Fourier seja de valores complexos, a interpolação destes números complexos é que tanto a amplitude(ou tamanho) como a fase (ou  ângulo inicial) estão presentes na onda.</p>
+       <p> A motivação para a transformada de Fourier veio com o estudo da série de Fourier. No estudo da série de Fourier, funções que são complicadas mas periódicas podem ser escritas através da soma de senos e cossenos. Devido as propriedades que o seno e o cosseno possuem é possível recuperar a amplitude de cada onda na série de Fourier. Muito dos casos é aconselhável usar  a forma de Euler, $$e^{(2 \pi i \theta)} = \cos(2 \pi \theta) + i \sin(2 \pi \theta)$$ Re-escrever senos e cossenos como exponenciais complexas faz-se necessário que o coeficiente de Fourier seja de valores complexos, a interpolação destes números complexos é que tanto a amplitude(ou tamanho) como a fase (ou  ângulo inicial) estão presentes na onda.</p>
        <img src="img.gif" alt="Smiley face"> <div style="text-align:center">caso a imagem não apareça, acesse o <a href="https://upload.wikimedia.org/wikipedia/commons/7/72/Fourier_transform_time_and_frequency_domains_%28small%29.gif" target="_blank">link</a></div>
-       <p>No primeiro frame da animação, a função $\textit{f}$ é solucionada usando a série de Fourier : combinação linear de senos e cossenos (azul).A frequência que compões esses senos e cossenos que estão espalhados por todo o espectro de frequeência, são representados como picos no domínio da frequência. A representação do domínio da frequeência da função $\hat{f}$, é construido baseado nos picos das frequências que aparecem na resolução da função.</p>
+       <p>No primeiro frame da animação, a função $\textit{f}$ é solucionada usando a série de Fourier : combinação linear de senos e cossenos (azul).A frequência que compões esses senos e cossenos que estão espalhados por todo o espectro de frequência, são representados como picos no domínio da frequência. A representação do domínio da frequência da função $\hat{f}$, é construído baseado nos picos das frequências que aparecem na resolução da função.</p>
    <hr>
 
 </body>
@@ -210,13 +210,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-$$x[n]=\frac{1}{N}\sum\limits_{n=0}^{\mbox{N-1}} e^{2 \pi j\frac{km}{N}} y[k]$$
+<p><h1>Teste da transformada rápida de Fourier (FFT)</h1></p>
+<p><hr></p>
+<p>Nessa parte do trabalho iremos testar como o cálculo da FFT irá se comportar com as bibliotecas **Numpy** e **Scipy** </p>
+$$x[n]=\sum\limits_{n=0}^{\mbox{N-1}} W_n  y[k]$$ 
+$$W_n = e^{-2 \pi j\frac{km}{N}}$$
+<hr> 
+<p>Iremos calcular a FFT de um vetor com valores aleatórios de 2042 posições usas as bibliotecas propostas e assim iremos analisar o tempo de compilação de cada.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Definindo as Bibliotecas que iremos usar</span>
@@ -237,7 +243,7 @@ $$x[n]=\frac{1}{N}\sum\limits_{n=0}^{\mbox{N-1}} e^{2 \pi j\frac{km}{N}} y[k]$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[109]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#-----------------Definindo quais serão os 2042 números------------------</span>
@@ -269,8 +275,8 @@ $$x[n]=\frac{1}{N}\sum\limits_{n=0}^{\mbox{N-1}} e^{2 \pi j\frac{km}{N}} y[k]$$
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Para o Scipy teremos o tempo de 0.0029997825622558594 segundos ---
-Para o NUmpy teremos o tempo de 0.0040013790130615234 segundos ---
+<pre>Para o Scipy teremos o tempo de 0.0029799938201904297 segundos ---
+Para o NUmpy teremos o tempo de 0.003977060317993164 segundos ---
 </pre>
 </div>
 </div>
@@ -284,8 +290,19 @@ Para o NUmpy teremos o tempo de 0.0040013790130615234 segundos ---
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exemplo:">Exemplo:<a class="anchor-link" href="#Exemplo:">&#182;</a></h1><hr>
-<p>Para poder exemplicar o uso da FFT de uma forma ainda mais clara, iremos utilizar a soma de duas sonoides,onde:</p>$$2 \times \cos(30x \times 5 \pi) + 1.54 \times \sin(20x \times 2 \pi)$$<p>Teremos $N=2042$ amostras e um período de $T=\frac{1}{800}$, assim poderemos testar como o <strong>Scipy</strong> e o <strong>Numpy</strong> irão trabalhar com a parte matemática e gráfica do resultado. Lembrando que anteriormente testamos as duas bibliotecas para calcular a FFT de um vetor contendo números aleatório de 2042 posições, assim obtvemos o resultado de que a biblioteca <strong>Scipy</strong> teve um tempo de compilação menor do que a biblioteca <strong>Numpy</strong>.</p>
+<p><h3>Análise dos resultados</h3></p>
+<p><p>Após o termino do primeiro teste com 2042 amostras aleatórias usando **Numpy** e **Scipy** concluímos que a biblioteca **Scipy** tende a ter um tempo de processamento menor,  depois de vários testes ela tende a ter o menor resultado na maioria das vezes.</p></p>
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Exemplo">Exemplo<a class="anchor-link" href="#Exemplo">&#182;</a></h1><hr>
+<p>Para poder exemplificar o uso da FFT de uma forma ainda mais clara, iremos utilizar a soma de duas sonoides,onde:</p>$$2 \times \cos(30x \times 5 \pi) + 1.54 \times \sin(20x \times 2 \pi)$$<p>Teremos $N=2042$ amostras aleatórias e um período de $T=\frac{1}{800}$, assim poderemos testar como o <strong>Scipy</strong> e o <strong>Numpy</strong> irão trabalhar com a parte matemática e gráfica do resultado. Lembrando que anteriormente testamos as duas bibliotecas para calcular a FFT de um vetor contendo números aleatório de 2042.</p>
 
 </div>
 </div>
@@ -1432,7 +1449,7 @@ RK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Conclus&#227;o">Conclus&#227;o<a class="anchor-link" href="#Conclus&#227;o">&#182;</a></h1><hr>
-<p>Após o término do exemplo concluimos, que ambas as biblitecas de FFT nos levaram ao mesmo resusltado, porém a <strong>Scipy</strong> continua sendo mais rápida, em alguns casos ela não se torna rápida como o esperado, pois se é utilizado o pacote abs da biblioteca Numpy, não consegui achar o pacote de abs para scipy. Com isso ocorre o "atraso" em algumas transformadas (obtida por valores aleatórios) e ocasionando o atraso na compilção.</p>
+<p>Após o término do exemplo concluímos, que ambas as bibliotecas de FFT nos levaram ao mesmo resultado, porém a <strong>Scipy</strong> continua sendo mais rápida, em alguns casos ela não se torna rápida como o esperado, pois se é utilizado o pacote abs da biblioteca Numpy, não consegui achar o pacote de abs para scipy. Com isso ocorre o "atraso" em algumas transformadas (obtida por valores aleatórios) e ocasionando o atraso na compilação.</p>
 
 </div>
 </div>
