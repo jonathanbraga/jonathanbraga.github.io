@@ -11,7 +11,17 @@
     <link rel="stylesheet" href="../../bower_components/pure/grids-responsive-min.css">    
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">    
     <link rel="stylesheet" href="../post.css">
-    <link href="../prism.css" rel="stylesheet" />
+
+    <!--SyntaxHihglighter-->
+    <script type="text/javascript" src="../../bower_components/SyntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript" src="../../bower_components/SyntaxHighlighter/shBrushCSharp.js"></script>
+	<link type="text/css" rel="stylesheet" href="../../bower_components/SyntaxHighlighter/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="../../bower_components/SyntaxHighlighter/shThemeDefault.css"/>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+		SyntaxHighlighter.defaults['toolbar'] = false;
+	</script>
+    <!--/SyntaxHihglighter-->
 </head>
 <body>
 
@@ -99,37 +109,35 @@
             <p>
                 Dentro do <i>App (Portable)</i> iremos encontrar o <i> App.xaml.cs</i>
             </p>
-            <pre>
-                <code class="language-csharp">
-namespace App
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+            <pre class="brush: c-sharp;">
+                namespace App
+                {
+                    public partial class App : Application
+                    {
+                        public App()
+                        {
+                            InitializeComponent();
 
-            MainPage = new App.MainPage();
-        }
+                            MainPage = new App.MainPage();
+                        }
 
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
+                        protected override void OnStart()
+                        {
+                            // Handle when your app starts
+                        }
 
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
+                        protected override void OnSleep()
+                        {
+                            // Handle when your app sleeps
+                        }
 
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
-        }
-    }
-}
-                </code>
-            </pre>  
+                        protected override void OnResume()
+                        {
+                            // Handle when your app resumes
+                        }
+                    }
+                }
+            </pre> 
             <p>
                 No <i> App.xaml.cs</i> é onde podemos fazer algumas configurações de iniciliação do app.
             </p> 
@@ -138,37 +146,32 @@ namespace App
                seu <i>Code Behind</i>, <i> MainPage.xaml.cs</i>
             </p>  
             <li>MainPage.xaml</li>
-            <pre>
-                <code class="language-csharp">
-< ?xml version="1.0" encoding="utf-8" ?>
-< ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:App"
-             x:Class="App.MainPage">
+            <pre class="brush: c-sharp;">
+                &lt;?xml version="1.0" encoding="utf-8" ?>
+                &lt;ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            xmlns:local="clr-namespace:App"
+                            x:Class="App.MainPage">
 
-  < Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
+                    &lt;Label Text="Welcome to Xamarin Forms!"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
 
-< /ContentPage>
-                </code>
-            </pre> 
-
+                &lt;/ContentPage>
+            </pre>
             <li>MainPage.xaml.cs</li>
-            <pre>
-                <code class="language-csharp">
-namespace App
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-    }
-}
-                </code>
-            </pre>  
+            <pre class="brush: c-sharp;">
+                namespace App
+                {
+                    public partial class MainPage : ContentPage
+                    {
+                        public MainPage()
+                        {
+                            InitializeComponent();
+                        }
+                    }
+                }
+            </pre>
             <p>
                 Antes de rodar a nossa solução precisamos definir qual será o nosso <i>StartUp project</i> (Seleciona o projeto -> Click com o botão direito do mouse ->Set as StartUp project). Podemos escolher qualquer um dos seis projetos apresentados.  
                 Rodando a nossa solução nas três plataformas, teremos:
