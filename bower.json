@@ -1,0 +1,20 @@
+{
+  "name": "Site",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "jonathan"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pure": "^0.6.2"
+  }
+}
