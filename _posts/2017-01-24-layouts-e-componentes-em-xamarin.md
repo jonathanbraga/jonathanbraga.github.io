@@ -1,6 +1,7 @@
 ---
 title: Layouts and Components Xamarin.Forms
 layout: posts
+comments: true
 date: '2017-01-24 10:40:56'
 categories: components
 ---
