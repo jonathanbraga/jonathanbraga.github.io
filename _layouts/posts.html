@@ -6,16 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Web API + Xamarin Forms + MVVM</title>
+    <title>{{ page.title }}</title>
     <meta name="description" content="Fala galera tranquilo? Sei que passei um tempo sem postar, mas esse post vai compensar! Vamos criar um mini projeto, onde iremos fazer chamada de uma WEB API...">
 
-    <link rel="stylesheet" href="/assets/main.css">
-    <link rel="canonical" href="http://localhost:4000/project/2017/02/17/web-api-xamarin-forms-mvvm.html">
-    <link rel="alternate" type="application/rss+xml" title="Jonathan Braga" href="/feed.xml">
+    <link rel="stylesheet" href="{{ " /assets/main.css "| prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
 
 
 </head>
-
 
 <body>
 
@@ -42,18 +41,20 @@
 
 
     <main class="page-content" aria-label="Content">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-            <header class="post-header">
-                <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-                <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-                    {%endif %}{% if page.comments %} • <a href="https://jonathanbraga.com{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}</p>
+        <div class="wrapper">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+                <header class="post-header">
+                    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+                    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></span>
+                        </span>
+                </header>
+                <div class="post-content" itemprop="articleBody">
+                    {{ content }}
+                </div>
+            </article>
+            {% include disqus.html %}
+        </div>
 
-            </header>
-            <div class="post-content" itemprop="articleBody">
-                {{ content }}
-            </div>
-        </article>
-        {% include disqus.html %}
     </main>
 
     <footer class="site-footer">
