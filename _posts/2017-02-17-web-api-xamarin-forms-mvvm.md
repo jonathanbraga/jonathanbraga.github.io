@@ -1,6 +1,6 @@
 ---
 title: Web API + Xamarin Forms + MVVM
-layout: post
+layout: posts
 comments: true
 date: '2017-02-17 11:12:56'
 categories: project
