@@ -3,6 +3,7 @@ title: 'Simplified Xamarin Forms #1'
 layout: post
 date: '2017-01-23 07:56:39'
 categories: Descomplica
+comments: true
 ---
 
 ## O grande começo!
