@@ -1,0 +1,19 @@
+---
+title: Jonathan Braga
+email: jonathanb2br@gmail.com
+description: 'Sou Jonathan Braga, sou Bacharel em Ciências e Tecnologia pela Universidade
+  Federal do Rio Grande do Norte,  estudante de Engenharia Mecatrônica, programador
+  a mais de 3 anos com principal experiência em programação  Web e programação Mobile.
+
+'
+baseurl: ''
+url: ''
+twitter_username: __jonathan_
+github_username: jonathanbraga
+markdown: kramdown
+theme: minima
+gems:
+- jekyll-gist
+exclude:
+- Gemfile
+- Gemfile.lock
