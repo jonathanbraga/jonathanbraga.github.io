@@ -3,6 +3,7 @@ title: Web API + Xamarin Forms + MVVM
 layout: post
 date: '2017-02-17 11:12:56'
 categories: project
+comments: true
 ---
 
 Fala galera tranquilo? Sei que passei um tempo sem postar, mas esse post vai compensar! Vamos criar um mini projeto, onde iremos fazer chamada de uma WEB API (News API), utilizaremos alguns componentes e faremos tudo isso usando a estrutura MVVM. Será um projeto bem simples e rapido onde tentarei dar uma noção bem básica de um projeto MVVM e de chamadas de APIs.
