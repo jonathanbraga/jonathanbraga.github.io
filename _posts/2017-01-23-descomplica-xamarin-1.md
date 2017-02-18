@@ -1,10 +1,9 @@
 ---
-title: 'Descomplica Xamarin #1'
+title: 'Simplified Xamarin Forms #1'
 layout: post
 date: '2017-01-23 07:56:39'
 categories: Descomplica
 ---
-
 
 ## O grande começo!
 Olá, tudo bem ?
