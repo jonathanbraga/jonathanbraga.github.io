@@ -4,7 +4,6 @@ layout: posts
 comments: true
 date: '2017-02-17 11:12:56'
 categories: project
-
 ---
 
 Fala galera tranquilo? Sei que passei um tempo sem postar, mas esse post vai compensar! Vamos criar um mini projeto, onde iremos fazer chamada de uma WEB API (News API), utilizaremos alguns componentes e faremos tudo isso usando a estrutura MVVM. Será um projeto bem simples e rapido onde tentarei dar uma noção bem básica de um projeto MVVM e de chamadas de APIs.
@@ -14,10 +13,13 @@ O [News API](https://newsapi.org/) é uma API simples e fácil de usar que retor
 
 ## MVVM 
 O padrão de arquitetura Model-View-ViewModel (MVVM) foi inventado para o XAML. O padrão impõe uma separação da interface do usuário XAML (View) dos dados subjacentes (Model) através de uma classe que serve como um intermediário entre a View e o Model (ViewModel). O View e o ViewModel são frequentemente ligados através do BindingContext.
-<center>
-<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Projects/apinews/mvvm.png" alt="Xamarin site image" >
-</center>
-<br/>
+<div class="row">
+<div class="col s12 center-on-small-only center">
+	<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Projects/apinews/mvvm.png" alt="Xamarin site image" style="width:70%" >
+		</div>
+</div>
+</div>
 
 ## Let's Code
 Antes de tudo preciso dizer que dessa vez não vou colocar todos os códigos, pois iria ficar muito grande o post, vou disponibilizar o código no meu github, [para acessar o código basta clicar aqui](https://github.com/jonathanbraga/Xamarin/tree/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM). Nesse nosso projeto vamos organizar a nossa Solution Explore de uma maneira um pouco diferente, se comparado com as outras. Iremos criar três pastas na nossa PCL, **Models**, **Views** e **ViewModels**, assim teremos a nossa estrutura **MVVM**.
@@ -38,7 +40,7 @@ Antes de tudo preciso dizer que dessa vez não vou colocar todos os códigos, po
 
 ### Vamos nessa! 
 
-Antes de tudo vamos instalar alguns pacotes ao nosso projeto **Portable**, usando o manage nuget packages, instale o **Microsoft HTTP Client Libraries** e** Newtonsoft.Json** .
+Antes de tudo vamos instalar alguns pacotes ao nosso projeto **Portable**, usando o manage nuget packages, instale o **Microsoft HTTP Client Libraries** e  **Newtonsoft.Json**.
 
 ### Entendendo a News API
 Para que possamos usar a API da melhor forma, iremos precisar entender como ela é construida e como iremos utilizar esses dados.

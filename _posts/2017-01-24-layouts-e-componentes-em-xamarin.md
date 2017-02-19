@@ -1,5 +1,5 @@
 ---
-title: Layouts and Components Xamarin.Forms
+title: Layouts and Components
 layout: posts
 comments: true
 date: '2017-01-24 10:40:56'
@@ -24,10 +24,13 @@ Bastante poderoso quando o assunto é definir tamanhos proporcionais de tela par
 - ScrollViewÉ usado para mostrar componentes que não cabem na tela do dispositivo. <br/>
 Na minha humilde opinião esse é o layout mais usado e o mais fácil de se utilizar. Por padrão posiciona verticalmente os componentes.
 
-<center>
-<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Components/Layouts%2BComponentes/Layouts.png" alt="tela 1" >
-</center>
-<br/>
+<div class="row">
+	<div class="col s12 center-on-small-only center">
+		<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Components/Layouts%2BComponentes/Layouts.png" alt="tela 2" style="width:60%" >
+		</div>
+	</div>
+</div>
 
 ## Componentes 
 
@@ -73,19 +76,25 @@ Solution Explore
 * MainPage.xaml
 <script src="https://gist.github.com/jonathanbraga/ee38eeb7acf509321e84d5cfa5d16b83.js"></script>
 
-<center>
-<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Components/Layouts%2BComponentes/tela3.png" alt="tela 3" style="width:35%">
-</center>
-<br/>
+<div class="row">
+	<div class="col s12 center-on-small-only center">
+		<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Components/Layouts%2BComponentes/tela3.png" alt="tela 3" style="width:30%">
+		</div>
+	</div>
+</div>
 
 - StackLayout + Label + Button + Entry + Grid
 - MainPage.xaml
 <script src="https://gist.github.com/jonathanbraga/be14d991e275b778bba55aa9e42a57c3.js"></script>
 
-<center>
-<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Components/Layouts%2BComponentes/tela1.png" alt="tela 3" style="width:35%">
-</center>
-<br/>
+<div class="row">
+	<div class="col s12 center-on-small-only center">
+		<div class="image-container">
+<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Components/Layouts%2BComponentes/tela1.png" alt="tela 3" style="width:30%">
+		</div>
+	</div>
+</div>
 
 Para cada componente temos algumas propriedades, no segundo exemplo podemos ver isso de uma forma mais clara, como por exemplo:
 

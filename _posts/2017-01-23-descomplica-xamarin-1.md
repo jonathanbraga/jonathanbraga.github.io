@@ -20,10 +20,24 @@ Sou Jonathan Braga, programador e aspirante a engenheiro mecatrônico. Como enge
 
 O post de hoje vai ser uma breve introdução ao Xamarin Forms e no final vamos criar o nosso primeiro app. O mundo mudou quando a [Microsoft](https://www.microsoft.com/pt-br/) trouxe a Xamarin para a realidade open source, trouxe a facilidade na construção de apps. Agora não se é mais necessário três times de programadores ou um super programador que saiba as três linguagens para desenvolver apps para IOS, Android e WinPhone. Hoje, temos o [Xamarin Forms](https://developer.xamarin.com/guides/xamarin-forms/) que proporciona o compartilhamento de código e assim a construção de apps nativos! 
 
-<center>
-<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/android.png" alt="android" > <img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/apple.png" alt="apple" > <img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/windows.png" alt="winphone" >
-</center>
-<br/>
+
+<div class="row">
+	<div class="col s4 center-on-small-only center">
+		<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/android.png" alt="android"  style="width:50%" >
+		</div>
+	</div>
+		<div class="col s4 center-on-small-only center">
+		<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/windows.png" alt="winphone"  style="width:50%" >
+		</div>
+	</div>
+		<div class="col s4 center-on-small-only center">
+		<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/apple.png" alt="apple"  style="width:50%" >
+		</div>
+	</div>
+</div>
 
 Xamarin Forms, proporciona todo o conforto da linguagem C# e ainda nos permite usar API nativas de cada plataforma.
 
@@ -39,16 +53,24 @@ Criando um Projeto Cross-Platform
 -  Cross-Platform 
 -  Blank Xaml App (Xamarin.Forms.Portable)
 
-<center>
-<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/tela1.png" alt="tela 1" >
-</center>
-<br/>
+<div class="row">
+	<div class="col s12 center-on-small-only center">
+		<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/tela1.png" alt="tela 1" style="width:70%" >
+		</div>
+	</div>
+</div>
+
 Após o projeto ser criado vamos analisar a estrutura dele.
 
-<center>
-<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/tela4.png" alt="tela 2" style="width:30%">
-</center>
-<br/>
+<div class="row">
+	<div class="col s12 center-on-small-only center">
+		<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/tela4.png" alt="tela 2" style="width:40%" >
+		</div>
+	</div>
+</div>
+
 Vemos que a nossa solução possui seis projetos dentro dela, mas queria destacar o App (Portable).
 É onde fica localizado o nosso "código geral", nosso código compartilhado, onde vamos criar Models, Views, Chamadas de Web API etc.
 
@@ -68,10 +90,14 @@ Ainda no App (Portable) iremos encontrar o MainPage.xaml, que é responsável po
 
 Antes de rodar a nossa solução precisamos definir qual será o nosso StartUp project (Seleciona o projeto -> Click com o botão direito do mouse ->Set as StartUp project). Podemos escolher qualquer um dos seis projetos apresentados. Rodando a nossa solução nas três plataformas, teremos:
 
-<center>
-<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/tela3.png" alt="tela 3" style="width:30%">
-</center>
-<br/>
+<div class="row">
+	<div class="col s12 center-on-small-only center">
+		<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/descomplicaXamarin1/tela3.png" alt="tela 3" style="width:30%">
+		</div>
+	</div>
+</div>
+
 Ao final da execução temos um app, totalmente nativo, obedecendo todas as regras de design e responsividade de cada plataforma.
 
 ## Hasta la vista baby! 
