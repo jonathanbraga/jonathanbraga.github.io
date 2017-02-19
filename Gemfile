@@ -32,3 +32,5 @@ gem 'jekyll-admin', group: :jekyll_plugins
 #Add Gist 
 gem 'jekyll-gist'
 
+gem 'jekyll-paginate'
+

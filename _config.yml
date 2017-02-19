@@ -10,7 +10,7 @@ twitter_username: __jonathan_
 github_username: jonathanbraga
 markdown: kramdown
 theme: minima
-gems:
+gems: 
 - jekyll-gist
 exclude:
 - Gemfile
