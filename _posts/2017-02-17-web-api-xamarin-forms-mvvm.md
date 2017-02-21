@@ -23,7 +23,6 @@ O padrão de arquitetura Model-View-ViewModel (MVVM) foi inventado para o XAML. 
 
 ## Let's Code
 Antes de tudo preciso dizer que dessa vez não vou colocar todos os códigos, pois iria ficar muito grande o post, vou disponibilizar o código no meu github, [para acessar o código basta clicar aqui](https://github.com/jonathanbraga/Xamarin/tree/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM). Nesse nosso projeto vamos organizar a nossa Solution Explore de uma maneira um pouco diferente, se comparado com as outras. Iremos criar três pastas na nossa PCL, **Models**, **Views** e **ViewModels**, assim teremos a nossa estrutura **MVVM**.
-
 <ul>
 		<li>Project_API_NEWS</li>
 		<ul>
@@ -69,6 +68,8 @@ Por fim, teremos que fazer algumas mudanças no nosso **App.xaml.cs**  <br/>
 
 
 ### ViewModels 
-
-Agora, vá na pasta **ViewModels** crie uma classe chama de [**BaseViewModel**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/BaseViewModel.cs), essa classe Implementa o **INotifyPropertyChanged**.
-Após a implementação da classe **BaseViewModel**, podemos partir para criar a nossa [**HomeViewModel**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/HomeViewModel.cs)
+Com toda a nossa parte de **Service** , **Controls** , **Helpers** e **Models** já configuradas, vamos partir para a constrção das nossas **VewModels**.
+Em **ViewModels** crie uma classe chama de [**BaseViewModel**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/BaseViewModel.cs), essa classe Herda de **INotifyPropertyChanged**.
+Após a implementação da classe **BaseViewModel**, podemos partir para o desenvolvimento das nossas **ViewModels** . 
+#### HomeViewModel
+[**HomeViewModel**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/HomeViewModel.cs)
