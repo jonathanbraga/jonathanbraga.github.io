@@ -8,6 +8,14 @@ categories: project
 
 Fala galera tranquilo? Sei que passei um tempo sem postar, mas esse post vai compensar! Vamos criar um mini projeto, onde iremos fazer chamada de uma WEB API (News API), utilizaremos alguns componentes e faremos tudo isso usando a estrutura MVVM. Será um projeto bem simples e rápido onde tentarei dar uma noção bem básica de um projeto MVVM e de chamadas de APIs.
 
+<div class="row">
+<div class="col s12 center-on-small-only center">
+	<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Projects/apinews/output_ydtmAK.gif" alt="Gif" style="width:30%" >
+		</div>
+</div>
+</div>
+
 ## News API 
 O [News API](https://newsapi.org/) é uma API simples e fácil de usar, retorna metadados JSON para as manchetes atuais publicadas. Possui uma variedade de fontes de notícias e blogs. Com uma exelente documentação, bem fácil de se entender. Para utilizar basta criar uma conta no site.
 
@@ -22,20 +30,15 @@ O padrão de arquitetura Model-View-ViewModel (MVVM) foi inventado para o XAML. 
 </div>
 
 ## Let's Code
-Antes de tudo preciso dizer que dessa vez não vou colocar todos os códigos, pois iria ficar muito grande o post, vou disponibilizar o código no meu github, [para acessar o código basta clicar aqui](https://github.com/jonathanbraga/Xamarin/tree/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM). Nesse nosso projeto vamos organizar a nossa Solution Explore de uma maneira um pouco diferente, se comparado com as outras. Iremos criar cinco pastas na nossa PCL, **Models**, **Views**, **ViewModels**, **Controls** e **Service**.
-<ul>
-		<li>Project_API_NEWS</li>
-		<ul>
-				<li>Portable</li>
-				<ul> 
-						<li>Models</li>
-						<li>Views</li>
-						<li>ViewModels</li>
-				</ul>
-				<li>Doird</li>
-				<li>IOS</li>
-		</ul>
-</ul>
+Antes de tudo preciso dizer que dessa vez não vou colocar todos os códigos, pois iria ficar muito grande o post, vou disponibilizar o código no meu github, [para acessar o código basta clicar aqui](https://github.com/jonathanbraga/Xamarin/tree/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM). Nesse nosso projeto vamos organizar a nossa Solution Explore de uma maneira um pouco diferente, se comparado com as outras. Iremos criar cinco pastas no projeto Portable, **Models**, **Views**, **ViewModels**, **Controls** e **Service**.
+
+<div class="row">
+<div class="col s12 center-on-small-only center">
+	<div class="image-container">
+			<img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/Projects/apinews/Captura%20de%20Tela%20(12).png" alt="Solution Explore" style="width:40%" >
+		</div>
+</div>
+</div>
 
 ### Vamos nessa! 
 
@@ -61,24 +64,24 @@ Agora em **Controls**,  crie uma **classe** com o nome de [BindablePicker](https
 
 ### Service
 
-Dentro de **ViewModels**  cire  uma pasta, chamada de **Service**, dentro dessa pasta crie uma **interface** com o nome de [**INavigationService**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/Service/INavigationService.cs). Com essa interface poderemos navegar entre as Views.
-Dentro de **View**  crie  uma pasta, chamada de **Service**, dentro dessa pasta crie uma classe com o Nome de [**NavigationService**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/Views/Service/NavigationService.cs). 
+Dentro de **ViewModels**  crie  uma pasta, chamada de **Service**, dentro dessa pasta crie uma **interface** com o nome de [**INavigationService**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/Service/INavigationService.cs). 
+Dentro de **View**  crie  uma pasta, chamada de **Service**, dentro dessa pasta crie uma classe com o Nome de [**NavigationService**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/Views/Service/NavigationService.cs). Com isso implementado poderemos navegar entre as Views.
 Por fim, teremos que fazer algumas mudanças no nosso **App.xaml.cs**  <br/>
 <script src="https://gist.github.com/jonathanbraga/b2ec208bd9765ffc031830ef9e89e6f4.js"></script>
 
 
 ### ViewModels 
-Com toda a nossa parte de **Service** , **Controls** , **Helpers** e **Models** já prontas, vamos partir para a contrução das nossas **VewModels**.
+Com toda a nossa parte de **Service** , **Controls** , **Helpers** e **Models** já finalizado, vamos partir para a contrução das nossas **VewModels**.
 Em **ViewModels** crie uma classe chama de [**BaseViewModel**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/BaseViewModel.cs), essa classe Herda de **INotifyPropertyChanged**, responsável por toda a mágica do MVVM.
 Antes de criar as nossas ViewModels, vamos definir o que terá em cada View. Teremos basicamente três Views, **SelectJournalView** -onde vamos poder escolher de qual jornal ler as  manchetes-, **HomeView** -lista de todas as manchetes do jornal selecionado-, **SiteView** -página da manchete selecionada-. 
 [**SelectJournalViewModel**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/SelectJournalViewModel.cs), [**HomeViewModel**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/HomeViewModel.cs), [**SiteViewViewModel**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/ViewModels/SiteViewModel.cs).
 
 ### Views 
 
-Finalmente vamos para a parte final do projeto, como já definimos a organização das páginas, vamos direto para o desenvolvimento. Na pasta **Views** crie três **FormPage.xaml**, [**SelectJournalView**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/Views/SelectJournalView.xaml), [**HomeView**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/Views/HomeView.xaml),  [**SiteView**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/Views/SiteView.xaml.cs).
+Finalmente vamos para a parte final do projeto, como já definimos a organização das páginas, vamos direto para o desenvolvimento. Na pasta **Views** crie três **Forms Xaml Page**, [**SelectJournalView**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/Views/SelectJournalView.xaml), [**HomeView**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/Views/HomeView.xaml),  [**SiteView**](https://github.com/jonathanbraga/Xamarin/blob/master/NewsApi/NewsApi%2BListView%2BMVVM/NewsApi_ListView_MVVM/Views/SiteView.xaml.cs).
 
-Não esquecer de colocar o **BindinContext** no code behind, aponete para a **ViewModel** correspondente.
+Não esquecer de colocar o **BindinContext** no code behind, aponte para a **ViewModel** correspondente.
 
 ## Hasta la vista baby! 
 
-Espero que tenham gostado desse post! O site mudou um pouco pra muito, algumas coisas não vão funcionar 100% ainda, mas aos poucos estarei melhorando. Agora vou poder acompanhar o feedback de vocês vias comentário no post, vamos nos ajudar para que juntos possamos melhorar :) 
+Espero que tenham gostado desse post! O site mudou um pouco pra muito, algumas coisas não vão funcionar 100% ainda, mas aos poucos estarei melhorando. Agora vou poder acompanhar o feedback de vocês via comentário no post, vamos nos ajudar para que juntos possamos melhorar :) 
