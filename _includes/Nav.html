@@ -1,5 +1,5 @@
 <nav style="background-color: #145ea8">
-    <a href="/" class="brand-logo center">{{ site.title }}</a>
+    <!--<a href="/" class="brand-logo center">{{ site.title }}</a>
     <ul id="slide-out" class="side-nav fixed" style="background-color: #f6f6f6;">
         <li>
             <div class="userView">
@@ -36,5 +36,42 @@
 
 
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>-->
+    <a href="/" class="brand-logo center">{{ site.title }}</a>
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <div class="background" style="margin-bottom: -113px;">
+                    <img src="http://www.freevectors.net/files/large/BlueTechBackgroundVector.jpg">
+                </div>
+                <img class="circle" src="https://scontent.fnat2-1.fna.fbcdn.net/v/t1.0-9/12688069_10205734599748135_6682674674498734086_n.jpg?oh=654e0b705b17483a5c1d0d93f53e1bef&oe=592E1D9E">
+                <li><a style="color: #f6f6f6; cursor: text;">{{ site.title }}</a></li>
+                <li><a href="#!" style="color: #f6f6f6; cursor: text;">jonathanb2br@gmail.com</a></li>
+            </div>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li style="margin-top: 30px;">
+            <a class="subheader">
+                <h6>Categories</h6>
+            </a>
+        </li>
+
+        {% for tag in site.categories %}
+        <li><a class="waves-effect" href="{{ tag.url | categories.baseurl }}" id="{{ tag[0] }}">{{ tag[0] | capitalize }}</a></li>
+        {% endfor %}
+        <a class="subheader">
+            <h6>Social</h6>
+        </a>
+        </li>
+        <li>
+            <a class="waves-effect" href="https://www.facebook.com/jonathan.braga3">
+                <i class="fa fa-facebook" aria-hidden="true"></i>/jonathan.braga3</a>
+        </li>
+        <li><a class="waves-effect" href="https://twitter.com/__jonathan_"><i class="fa fa-twitter" aria-hidden="true"></i>@__jonathan_</a></li>
+        <li><a class="waves-effect" href="https://github.com/jonathanbraga"><i class="fa fa-github" aria-hidden="true"></i>@jonathanbraga</a></li>
+
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
 </nav>
