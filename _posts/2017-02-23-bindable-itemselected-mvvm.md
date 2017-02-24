@@ -1,5 +1,5 @@
 ---
-title: Bindable ItemSelected + Xamarin Forms
+title: " Binding ListView SelectedItems"
 layout: posts
 date: '2017-02-23 09:38:25'
 categories: Descomplica
@@ -7,7 +7,7 @@ comments: true
 ---
 
 Fala galera, tranquilo? O post de hoje vai ser bem rápido e simples, hoje é mais um **descomplica**, vamos fazer um exemplo falando sobre
-como selecionar um **Item** de uma **ListView** via **Binding** (o famoso *Bindable Item Selected* ).
+como selecionar um **Item** de uma **ListView** via **Binding** .
 
 
 
