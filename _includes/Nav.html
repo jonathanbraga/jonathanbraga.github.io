@@ -15,16 +15,18 @@
                 </li>
             </div>
         </li>
-        <li style="margin-top: 30px;">
+        <li style="margin-top: 30px;"><a class="waves-effect" href="/about/"><i class="fa fa-user-o" aria-hidden="true"></i> About</a></li>
+        <li><a class="waves-effect" href="/about/"><i class="fa fa-calendar" aria-hidden="true"></i>Archives</a></li>
+        <li><a class="waves-effect" href="#"><i class="fa fa-hashtag" aria-hidden="true"></i> Categories</a></li>
+        <li><a class="waves-effect" href="{{ " /feed.xml " | prepend: site.baseurl }}"><i class="fa fa-rss" aria-hidden="true"></i> RSS</a></li>
+        <!--<li>
             <a class="subheader">
                 <h6>Categories</h6>
             </a>
         </li>
-
         {% for tag in site.categories %}
         <li><a class="waves-effect" href="{{ tag.url | categories.baseurl }}" id="{{ tag[0] }}">{{ tag[0] | capitalize }}</a></li>
-        {% endfor %}
-        </li>
+        {% endfor %}-->
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
 </nav>
