@@ -12,6 +12,7 @@ markdown: kramdown
 theme: minima
 gems: 
 - jekyll-gist
+- jekyll-sitemap
 exclude:
 - Gemfile
 - Gemfile.lock
