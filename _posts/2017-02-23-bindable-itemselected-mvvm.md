@@ -2,7 +2,7 @@
 title: " Binding ListView SelectedItems"
 layout: posts
 date: '2017-02-23 09:38:25'
-categories: Descomplica
+categories: simplify
 comments: true
 ---
 

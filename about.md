@@ -1,7 +1,18 @@
 ---
 title: About
-layout: page
+layout: home
 permalink: "/about/"
 ---
 
-Sou Jonathan Braga, sou Bacharel em Ciências e Tecnologia pela Universidade Federal do Rio Grande do Norte, estudante de Engenharia Mecatrônica, programador a mais de 3 anos com principal experiência em programação Web e programação Mobile. Como estudante de Engenharia Mecatrônica tive a oportunidade de expandir meus conhecimentos na área de software e ganhar novas habilidades na área de hardware, conseguindo aprofundar os meus estudos em Arduino e Intel Galileo.
+
+<div class="col s12  center" style="margin-top:30px;">
+	<div class="image-container">
+	    <img src="https://dl.dropboxusercontent.com/u/35899264/blog/img/12688069_10205734599748135_6682674674498734086_n.jpg" alt="Gif" style="width:30%;border-radius: 50%;" >
+	</div>
+    <p>
+        Mobile and web developer, mechatronic engineering student at <a class="waves-effect" href="http://www.ufrn.br/">UFRN</a>, from Fortaleza-CE, currently livin in Natal-RN.<br/>
+        We'll learn together about mobile development using Xamarin.
+
+    </p>
+</div>
+
