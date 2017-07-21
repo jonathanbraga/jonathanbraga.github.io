@@ -1,6 +1,6 @@
 ---
-title: " Binding ListView SelectedItems"
-layout: posts
+title: Binding ListView SelectedItems
+layout: post
 date: '2017-02-23 09:38:25'
 categories: simplify
 comments: true

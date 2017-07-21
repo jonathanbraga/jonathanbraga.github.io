@@ -1,6 +1,6 @@
 ---
 title: Web API + Xamarin Forms + MVVM
-layout: posts
+layout: post
 comments: true
 date: '2017-02-17 11:12:56'
 categories: projects
@@ -84,4 +84,4 @@ Não esquecer de colocar o **BindinContext** no code behind, aponte para a **Vie
 
 ## Hasta la vista baby! 
 
-Espero que tenham gostado desse post! O site mudou um pouco pra muito, algumas coisas não vão funcionar 100% ainda, mas aos poucos estarei melhorando. Agora vou poder acompanhar o feedback de vocês via comentário no post, vamos nos ajudar para que juntos possamos melhorar :) 
+Espero que tenham gostado desse post! O site mudou um pouco pra muito, algumas coisas não vão funcionar 100% ainda, mas aos poucos estarei melhorando. Agora vou poder acompanhar o feedback de vocês via comentário no post, vamos nos ajudar para que juntos possamos melhorar :)

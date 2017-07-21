@@ -3,55 +3,62 @@
 
 {% include head.html %}
 
-<body style="background-color: #f6f6f6">
-    {% include google.html %} {% include Nav.html %}
-    <link rel="stylesheet" href="{{ " /css/main.css " | prepend: site.baseurl }}">
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col s12 left">
-                    <ul class="collection with-header" style="margin-top: 40px;">
-                        <li class="collection-header" style="background-color: #f6f6f6">
-                            <h4>Simplify</h4>
-                        </li>
-                        {% for post in site.categories.simplify %}
-                        <li class="collection-item" style="background-color: #f9f9f9"><a href=" {{ post.url }} "><span>{{ post.date | date: "%B %-d, %Y " }}</span> - {{ post.title }}</a></li>
+<body class="layout-default">
+    <div class="container">
+        {% include nav.html %}
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">Categories</h1>
+                    <hr>
+                    <div>
+                        <br>
+                        <h3 class="title is-3">Simplify</h3> <br> {% for post in site.categories.simplify %}
+                        <h5 class="subtitle is-5"><a href=" {{ post.url }} " style="color: #145ea8;"><span>• {{ post.date | date: "%B %-d, %Y " }}</span> - {{ post.title }}</a></h5>
                         {% endfor %}
-                    </ul>
-
-                    <ul class="collection with-header" style="margin-top: 40px;">
-                        <li class="collection-header" style="background-color: #f6f6f6">
-                            <h4>Components</h4>
-                        </li>
-                        {% for post in site.categories.components %}
-                        <li class="collection-item" style="background-color: #f9f9f9"><a href=" {{ post.url }} "><span>{{ post.date | date: "%B %-d, %Y " }}</span> - {{ post.title }}</a></li>
+                    </div>
+                    <div>
+                        <br>
+                        <h3 class="title is-3">Components</h3> <br> {% for post in site.categories.components %}
+                        <h5 class="subtitle is-5"><a href=" {{ post.url }} " style="color: #145ea8;"><span>• {{ post.date | date: "%B %-d, %Y " }}</span> - {{ post.title }}</a></h5>
                         {% endfor %}
-                    </ul>
-
-                    <ul class="collection with-header" style="margin-top: 40px;">
-                        <li class="collection-header" style="background-color: #f6f6f6">
-                            <h4>Projects</h4>
-                        </li>
-                        {% for post in site.categories.projects %}
-                        <li class="collection-item" style="background-color: #f9f9f9"><a href=" {{ post.url }} "><span>{{ post.date | date: "%B %-d, %Y " }}</span> - {{ post.title }}</a></li>
+                    </div>
+                    <div>
+                        <br>
+                        <h3 class="title is-3">Projects</h3> <br> {% for post in site.categories.projects %}
+                        <h5 class="subtitle is-5"><a href=" {{ post.url }} " style="color: #145ea8;"><span>• {{ post.date | date: "%B %-d, %Y " }}</span> - {{ post.title }}</a></h5>
                         {% endfor %}
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <!--{% if page.url != "/404.html " %}
-            <p class="rss-subscribe ">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }} ">via RSS</a></p>
-            {% endif %}-->
-        </div>
-    </main>
-
-    {% include footer.html %}
-
-    <script id="dsq-count-scr " src="//jonathanbraga.disqus.com/count.js " async></script>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js "></script>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>
-        $(function() {
-            $(".button-collapse ").sideNav();
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Get all "navbar-burger" elements
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any nav burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(function($el) {
+                    $el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        var target = $el.dataset.target;
+                        var $target = document.getElementById(target);
+
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
         });
     </script>
 </body>
