@@ -21,5 +21,5 @@ permalink: "/about/"
             </p>
 						</center>
         </div>
-    </div>
+    </div> 
 </div>
