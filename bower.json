@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "authors": [
+    "Jonathan Braga <jonathanb2br@gmail.com>"
+  ],
+  "description": "joanthan's blog",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bulma": "^0.4.3"
+  }
+}

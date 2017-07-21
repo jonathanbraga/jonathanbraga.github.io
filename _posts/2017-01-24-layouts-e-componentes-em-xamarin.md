@@ -1,6 +1,6 @@
 ---
 title: Layouts and Components
-layout: posts
+layout: post
 comments: true
 date: '2017-01-24 10:40:56'
 categories: components

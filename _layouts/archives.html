@@ -3,37 +3,51 @@
 
 {% include head.html %}
 
-<body style="background-color: #f6f6f6">
-    {% include google.html %} {% include Nav.html %}
-    <link rel="stylesheet" href="{{ " /css/main.css " | prepend: site.baseurl }}">
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col s12 left">
-                    {% for post in site.posts %} {% assign currentDate = post.date | date: "%B %Y" %} {% if currentDate != myDate %} {% unless forloop.first %}</ul>{% endunless %}
-                    <ul class="collection with-header" style="margin-top: 40px;">
-                        <li class="collection-header" style="background-color: #f6f6f6">
-                            <h4>{{ currentDate }}</h4>
-                        </li>
-                        {% assign myDate = currentDate %} {% endif %}
-                        <li class="collection-item" style="background-color: #f9f9f9"><a href=" {{ post.url }} "><span>{{ post.date | date: "%B %-d, %Y " }}</span> - {{ post.title }}</a></li>
+<body class="layout-default">
+    <div class="container">
+        {% include nav.html %}
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">Archives</h1>
+                    <hr>
+                    <div>
+                        {% for post in site.posts %} {% assign currentDate = post.date | date: "%B %Y" %} {% if currentDate != myDate %} {% unless forloop.first %}{% endunless %}
+                        <br>
+                        <h3 class="title is-3">{{ currentDate }}</h3> <br> {% assign myDate = currentDate %} {% endif %}
+                        <h5 class="subtitle is-5"><a style="color: #145ea8;" href=" {{ post.url }} "><span>• {{ post.date | date: "%B %-d, %Y " }}</span> - {{ post.title }}</a></h5>
                         {% if forloop.last %}</ul>{% endif %} {% endfor %}
+                    </div>
                 </div>
             </div>
-            <!--{% if page.url != "/404.html " %}
-            <p class="rss-subscribe ">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }} ">via RSS</a></p>
-            {% endif %}-->
-        </div>
-    </main>
-
-    {% include footer.html %}
-
-    <script id="dsq-count-scr " src="//jonathanbraga.disqus.com/count.js " async></script>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js "></script>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>
-        $(function() {
-            $(".button-collapse ").sideNav();
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Get all "navbar-burger" elements
+            var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any nav burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(function($el) {
+                    $el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        var target = $el.dataset.target;
+                        var $target = document.getElementById(target);
+
+                        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+                        $el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
         });
     </script>
 </body>

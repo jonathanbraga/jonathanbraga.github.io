@@ -1,6 +1,6 @@
 ---
 title: 'Simplified Xamarin Forms #1'
-layout: posts
+layout: post
 date: '2017-01-23 07:56:39'
 categories: simplify
 comments: true
